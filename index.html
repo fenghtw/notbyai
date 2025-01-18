@@ -76,12 +76,12 @@
             // 执行复制命令
             const successful = document.execCommand("copy");
             if (successful) {
-                alert("代码已复制！");
+                alert("代码已复制！尺寸大小请自行调节！");
             } else {
-                alert("复制失败，请手动复制！");
+                alert("复制失败！");
             }
         } catch (err) {
-            alert("复制失败，请手动复制！");
+            alert("复制失败！");
         }
 
         // 移除textarea元素
