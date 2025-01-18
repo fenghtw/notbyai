@@ -4,189 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Not By AI</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-
-        .container {
-            text-align: center;
-            max-width: 1000px;
-            padding: 20px;
-            margin: 20px;
-        }
-
-        .logo {
-            margin-bottom: 20px;
-        }
-
-        .logo img {
-            width: 200px;
-        }
-
-        .content {
-            background: #fff;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            line-height: 1.8;
-            color: #333;
-            text-align: left;
-        }
-
-        .content p {
-            margin: 20px 0;
-        }
-
-        .footer {
-            margin-top: 20px;
-            font-size: 14px;
-            color: #555;
-            cursor: pointer;
-        }
-
-        .footer a {
-            color: #0073e6;
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* Modal Styles */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            justify-content: center;
-            align-items: center;
-            animation: fadeIn 0.3s ease;
-        }
-
-        .modal-content {
-            background: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            max-width: 700px;
-            width: 100%;
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            transform: scale(0.8);
-            animation: scaleUp 0.3s ease forwards;
-        }
-
-        .sticker-container {
-            margin: 20px 0;
-        }
-
-        .sticker-row {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-
-        .sticker {
-            text-align: center;
-            margin: 0 10px;
-        }
-
-        .sticker img {
-            width: 150px;
-            height: auto;
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        .sticker p {
-            margin: 0;
-        }
-
-        .code-box {
-            background: #f4f4f4;
-            border: 1px solid #ddd;
-            padding: 10px;
-            font-family: monospace;
-            white-space: nowrap;
-            overflow-x: auto;
-        }
-
-        .modal-close {
-            margin-top: 20px;
-            display: inline-block;
-            padding: 10px 20px;
-            background: #0073e6;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .modal-close:hover {
-            background: #005bb5;
-        }
-
-        /* Animations */
-        @keyframes fadeIn {
-            from {
-                background-color: rgba(0, 0, 0, 0);
-            }
-            to {
-                background-color: rgba(0, 0, 0, 0.5);
-            }
-        }
-
-        @keyframes scaleUp {
-            from {
-                transform: scale(0.8);
-                opacity: 0;
-            }
-            to {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-
-        /* Responsive Design */
-        @media (max-width: 600px) {
-            .content {
-                padding: 20px;
-                font-size: 14px;
-            }
-
-            .logo img {
-                width: 150px;
-            }
-
-            .modal-content {
-                padding: 20px;
-            }
-
-            .sticker img {
-                width: 100px;
-            }
-
-            .code-box {
-                font-size: 12px;
-            }
-        }
-    </style>
+    <link rel="icon" href="sticker/notbyai_logo.png" type="image/png">
+    <script defer src="https://umami.xxbxk.top/script.js" data-website-id="062fcfd7-bb6c-42f6-bed5-cb002d1cd1f2"></script>
+    <!-- 引入外部 CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <div class="logo">
-            <img src="sticker/notbyai_black_frameless.png" alt="Not By AI">
+            <img src="notbyai_black_frameless.png" alt="Not By AI">
         </div>
         <div class="content">
             <p>在这个飞速发展的时代，AI可以快速的为你生产出任何你所需要的内容。
@@ -200,61 +26,67 @@
             <br>可正因为有这些独特的痕迹在里面，它们才显得那么有意义。</p>
             <p>AI可以生成下一篇的内容，但那并不是我想要的，我想要的，是独一无二的自己。</p>
         </div>
-        <div class="footer" onclick="openModal()">
-            把贴纸贴在你的博客上
-        </div>
-    </div>
-
-    <div class="modal" id="modal">
-        <div class="modal-content">
-            <h2>下载贴纸</h2>
+        <div class="footer">
+            <h2>使用贴纸</h2>
+            <p>把贴纸贴在网上后你就有责任遵守Not By AI的规定，确保符合90%原创性的标准且内容不使用AI生成。</p>
             <div class="sticker-container">
-                <div class="sticker-row">
-                    <div class="sticker">
-                        <img src="https://xx.com" alt="Not By AI Sticker">
-                        <p>notbyai_white_frameless.png</p>
-                    </div>
-                    <div class="sticker">
-                        <img src="https://xx.com" alt="Not By AI Sticker">
-                        <p>notbyai_red_white_Framed.png</p>
-                    </div>
-                    <div class="sticker">
-                        <img src="https://xx.com" alt="Not By AI Sticker">
-                        <p>notbyai_white_framed.png</p>
-                    </div>
+                <div class="sticker">
+    <img src="img/add_not_buy_ai_footer1.png" alt="Not By AI Sticker" onclick="copyStickerCode('&lt;a href=&quot;https://notbyai.fun&quot; target=&quot;_blank&quot; style=&quot;display: inline-block; text-decoration: none; height: 17px; line-height: 20px;&quot;&gt;&lt;img src=&quot;https://notbyai.fun/sticker/notbyai_black_frameless.png&quot; style=&quot;height: 23px; float: left;&quot;&gt;&lt;/a&gt;;')">
                 </div>
-                <div class="sticker-row">
-                    <div class="sticker">
-                        <img src="https://xx.com" alt="Not By AI Sticker">
-                        <p>notbyai_black_frameless.png</p>
-                    </div>
-                    <div class="sticker">
-                        <img src="https://xx.com" alt="Not By AI Sticker">
-                        <p>notbyai_red_Black_Framed.png</p>
-                    </div>
-                    <div class="sticker">
-                        <img src="https://xx.com" alt="Not By AI Sticker">
-                        <p>notbyai_Black_Framed.png</p>
-                    </div>
+                <div class="sticker">
+    <img src="img/add_not_buy_ai_footer2.png" alt="Not By AI Sticker" onclick="copyStickerCode('&lt;a href=&quot;https://notbyai.fun&quot; target=&quot;_blank&quot; style=&quot;display: inline-block; text-decoration: none; height: 17px; line-height: 20px;&quot;&gt;&lt;img src=&quot;https://notbyai.fun/sticker/notbyai_red_black_frameless.png&quot; style=&quot;height: 23px; float: left;&quot;&gt;&lt;/a&gt;;')">
+                </div>
+                <div class="sticker">
+    <img src="img/add_not_buy_ai_footer4.png" alt="Not By AI Sticker" onclick="copyStickerCode('&lt;a href=&quot;https://notbyai.fun&quot; target=&quot;_blank&quot; style=&quot;display: inline-block; text-decoration: none; height: 17px; line-height: 20px;&quot;&gt;&lt;img src=&quot;https://notbyai.fun/sticker/notbyai_black_framed.png&quot; style=&quot;height: 23px; float: left;&quot;&gt;&lt;/a&gt;;')">
+                </div>
+                <div class="sticker">
+    <img src="img/add_not_buy_ai_footer3.png" alt="Not By AI Sticker" onclick="copyStickerCode('&lt;a href=&quot;https://notbyai.fun&quot; target=&quot;_blank&quot; style=&quot;display: inline-block; text-decoration: none; height: 17px; line-height: 20px;&quot;&gt;&lt;img src=&quot;https://notbyai.fun/sticker/notbyai_red_black_framed.png&quot; style=&quot;height: 23px; float: left;&quot;&gt;&lt;/a&gt;;')">
+                </div>
+                <div class="sticker">
+    <img src="img/add_not_buy_ai_footer8.png" alt="Not By AI Sticker" onclick="copyStickerCode('&lt;a href=&quot;https://notbyai.fun&quot; target=&quot;_blank&quot; style=&quot;display: inline-block; text-decoration: none; height: 17px; line-height: 20px;&quot;&gt;&lt;img src=&quot;https://notbyai.fun/sticker/notbyai_white_frameless.png&quot; style=&quot;height: 23px; float: left;&quot;&gt;&lt;/a&gt;;')">
+                </div>
+                <div class="sticker">
+    <img src="img/add_not_buy_ai_footer7.png" alt="Not By AI Sticker" onclick="copyStickerCode('&lt;a href=&quot;https://notbyai.fun&quot; target=&quot;_blank&quot; style=&quot;display: inline-block; text-decoration: none; height: 17px; line-height: 20px;&quot;&gt;&lt;img src=&quot;https://notbyai.fun/sticker/notbyai_red_white_frameless.png&quot; style=&quot;height: 23px; float: left;&quot;&gt;&lt;/a&gt;;')">
+                </div>
+                <div class="sticker">
+    <img src="img/add_not_buy_ai_footer5.png" alt="Not By AI Sticker" onclick="copyStickerCode('&lt;a href=&quot;https://notbyai.fun&quot; target=&quot;_blank&quot; style=&quot;display: inline-block; text-decoration: none; height: 17px; line-height: 20px;&quot;&gt;&lt;img src=&quot;https://notbyai.fun/sticker/notbyai_white_framed.png&quot; style=&quot;height: 23px; float: left;&quot;&gt;&lt;/a&gt;;')">
+                </div>
+                <div class="sticker">
+    <img src="img/add_not_buy_ai_footer6.png" alt="Not By AI Sticker" onclick="copyStickerCode('&lt;a href=&quot;https://notbyai.fun&quot; target=&quot;_blank&quot; style=&quot;display: inline-block; text-decoration: none; height: 17px; line-height: 20px;&quot;&gt;&lt;img src=&quot;https://notbyai.fun/sticker/notbyai_red_white_framed.png&quot; style=&quot;height: 23px; float: left;&quot;&gt;&lt;/a&gt;')">
                 </div>
             </div>
-            <div class="code-box">
-                &lt;a href=&quot;https://xxbxk.top/notbyai.html&quot; target=&quot;_blank&quot; style=&quot;display: inline-block; text-decoration: none; height: 17px; line-height: 20px;&quot;&gt;
-                &lt;img src=&quot;https://xxbxk.top/notbyai/notbyai_black_frameless.png&quot; style=&quot;height: 23px; float: left;&quot;&gt;
-                &lt;/a&gt;
-            </div>
-            <button class="modal-close" onclick="closeModal()">关闭</button>
         </div>
     </div>
 
-    <script>
-        function openModal() {
-            document.getElementById('modal').style.display = 'flex';
+<script>
+    function copyStickerCode(html) {
+        // 创建一个隐藏的textarea元素
+        const tempInput = document.createElement("textarea");
+        tempInput.style.position = "absolute";
+        tempInput.style.left = "-9999px"; // 确保元素不可见
+        tempInput.value = html;
+
+        // 将textarea元素添加到文档中
+        document.body.appendChild(tempInput);
+
+        // 选中textarea中的内容
+        tempInput.select();
+
+        try {
+            // 执行复制命令
+            const successful = document.execCommand("copy");
+            if (successful) {
+                alert("代码已复制！");
+            } else {
+                alert("复制失败，请手动复制！");
+            }
+        } catch (err) {
+            alert("复制失败，请手动复制！");
         }
 
-        function closeModal() {
-            document.getElementById('modal').style.display = 'none';
-        }
-    </script>
+        // 移除textarea元素
+        document.body.removeChild(tempInput);
+    }
+</script>
 </body>
 </html>
