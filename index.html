@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Not By AI</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 800px;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        .logo {
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+            width: 200px;
+        }
+
+        .content {
+            background: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            line-height: 1.8;
+            color: #333;
+            text-align: left;
+        }
+
+        .content p {
+            margin: 20px 0;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+            cursor: pointer;
+        }
+
+        .footer a {
+            color: #0073e6;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal-content {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 700px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transform: scale(0.8);
+            animation: scaleUp 0.3s ease forwards;
+        }
+
+        .sticker-container {
+            margin: 20px 0;
+        }
+
+        .sticker-row {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .sticker {
+            text-align: center;
+            margin: 0 10px;
+        }
+
+        .sticker img {
+            width: 150px;
+            height: auto;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .sticker p {
+            margin: 0;
+        }
+
+        .code-box {
+            background: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 10px;
+            font-family: monospace;
+            white-space: nowrap;
+            overflow-x: auto;
+        }
+
+        .modal-close {
+            margin-top: 20px;
+            display: inline-block;
+            padding: 10px 20px;
+            background: #0073e6;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .modal-close:hover {
+            background: #005bb5;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                background-color: rgba(0, 0, 0, 0);
+            }
+            to {
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+        }
+
+        @keyframes scaleUp {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .content {
+                padding: 20px;
+                font-size: 14px;
+            }
+
+            .logo img {
+                width: 150px;
+            }
+
+            .modal-content {
+                padding: 20px;
+            }
+
+            .sticker img {
+                width: 100px;
+            }
+
+            .code-box {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="https://xxbxk.top/notbyni/notbyai_Black_Frameless.png" alt="Not By AI">
+        </div>
+        <div class="content">
+            <p>在这个飞速发展的时代，AI可以快速的为你生产出任何你所需要的内容。</p>
+            <p>有时候我不想写东西的时候，往往考虑为什么不能用AI来帮我写作，AI生产的内容让我的写作更流畅、更高效。</p>
+            <p>不过最打动我的是，AI没有办法写出对情感和思考下的陈述。文字是有生命的，它承载的是作者的情感，经历和那一刻的真实想法。</p>
+            <p>写作对我来说，不是任务，也不是为功利的输出，而是一种情绪的表达，更像是我和你面对面时的诉说，我在跟你讲我的故事。</p>
+            <p>或许我写得不好，甚至常常写了一半就放弃，但那依然是我自己的记录，是我在某一时刻对这个世界的感触。</p>
+            <p>用自己的方式去写，哪怕很慢，哪怕很琐碎。它是真实的，是属于我的痕迹。</p>
+            <p>或许有一天，我再回头看曾经认真的写的文字，会忍不住笑当时怎么会写这么矫情或者幼稚，</p>
+            <p>可正因为有这些独特的痕迹在里面，它们才显得那么有意义。</p>
+            <p>AI可以生成下一篇的内容，但那并不是我想要的，我想要的，是独一无二的自己。</p>
+        </div>
+        <div class="footer" onclick="openModal()">
+            把感想贴在你的博客上
+        </div>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <h2>下载贴纸</h2>
+            <div class="sticker-container">
+                <div class="sticker-row">
+                    <div class="sticker">
+                        <img src="https://xxbxk.top/notbyai/notbyai_red_black_framed.png" alt="Not By AI Sticker">
+                        <p>notbyai_white_frameless.png</p>
+                    </div>
+                    <div class="sticker">
+                        <img src="https://xxbxk.top/notbyai/notbyai_red_black_framed.png" alt="Not By AI Sticker">
+                        <p>notbyai_red_white_Framed.png</p>
+                    </div>
+                    <div class="sticker">
+                        <img src="https://xxbxk.top/notbyai/notbyai_red_black_framed.png" alt="Not By AI Sticker">
+                        <p>notbyai_white_framed.png</p>
+                    </div>
+                </div>
+                <div class="sticker-row">
+                    <div class="sticker">
+                        <img src="https://xxbxk.top/notbyai/notbyai_red_black_framed.png" alt="Not By AI Sticker">
+                        <p>notbyai_black_frameless.png</p>
+                    </div>
+                    <div class="sticker">
+                        <img src="https://xxbxk.top/notbyai/notbyai_red_black_framed.png" alt="Not By AI Sticker">
+                        <p>notbyai_red_Black_Framed.png</p>
+                    </div>
+                    <div class="sticker">
+                        <img src="https://xxbxk.top/notbyai/notbyai_red_black_framed.png" alt="Not By AI Sticker">
+                        <p>notbyai_Black_Framed.png</p>
+                    </div>
+                </div>
+            </div>
+            <div class="code-box">
+                &lt;a href=&quot;https://xxbxk.top/notbyai.html&quot; target=&quot;_blank&quot; style=&quot;display: inline-block; text-decoration: none; height: 17px; line-height: 20px;&quot;&gt;
+                &lt;img src=&quot;https://xxbxk.top/notbyai/notbyai_black_frameless.png&quot; style=&quot;height: 23px; float: left;&quot;&gt;
+                &lt;/a&gt;
+            </div>
+            <button class="modal-close" onclick="closeModal()">关闭</button>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            document.getElementById('modal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
